@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-
-url = 'https://rustih.ru/vse-stixi-roberta-rozhdestvenskogo-na-odnoj-stranice/'
-f = open('D:rozjdestvenskiy.txt', 'w')
+print("Введите ссылку")
+c = input()
+url = c
+f = open('data/'+c+'.txt', 'w')
 r = requests.get(url)
 
 soup = bs(r.text, "html.parser")
